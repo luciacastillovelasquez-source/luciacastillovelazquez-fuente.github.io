@@ -5,39 +5,322 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUCIA CASTILLO VELASQUEZ</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background: #f8f3ff;
+            color:#4b3b5a;
+        }
+
+        /* ENCABEZADO */
+
+        .hero{
+            min-height:100vh;
+            background: linear-gradient(135deg,#c8a2ff,#f5e9ff);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:40px;
+        }
+
+        .overlay{
+            background:white;
+            width:90%;
+            max-width:1100px;
+            border-radius:30px;
+            padding:50px;
+            text-align:center;
+            box-shadow:0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* FOTO */
+
+        .foto-container{
+            display:flex;
+            justify-content:center;
+            margin-bottom:25px;
+        }
+
+        .foto{
+            width:180px;
+            height:180px;
+            border-radius:50%;
+            border:6px solid #d7b8ff;
+            object-fit:cover;
+            background:#eee;
+        }
+
+        h1{
+            font-size:48px;
+            color:#7a4fcf;
+            margin-bottom:10px;
+        }
+
+        h2{
+            color:#9b6dff;
+            margin-bottom:20px;
+        }
+
+        .bio{
+            font-size:18px;
+            line-height:1.8;
+            text-align:justify;
+            margin-top:30px;
+            color:#5f4b75;
+        }
+
+        .contacto-info{
+            margin-top:30px;
+            background:#f3e7ff;
+            padding:25px;
+            border-radius:20px;
+        }
+
+        .contacto-info h3{
+            color:#7a4fcf;
+            margin-bottom:15px;
+            font-size:25px;
+        }
+
+        .contacto-info p{
+            margin:10px 0;
+            font-size:18px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:30px;
+            padding:15px 35px;
+            background:#9b6dff;
+            color:white;
+            text-decoration:none;
+            border-radius:40px;
+            transition:0.3s;
+            font-weight:bold;
+        }
+
+        .btn:hover{
+            background:#7a4fcf;
+            transform:scale(1.05);
+        }
+
+        /* SECCIONES */
+
+        .sobre{
+            padding:80px 40px;
+            display:flex;
+            gap:30px;
+            justify-content:center;
+            flex-wrap:wrap;
+        }
+
+        .card{
+            background:white;
+            width:350px;
+            padding:35px;
+            border-radius:25px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-8px);
+        }
+
+        .card h2{
+            text-align:center;
+            margin-bottom:20px;
+            color:#7a4fcf;
+        }
+
+        .card p,
+        .card li{
+            line-height:1.8;
+            font-size:17px;
+        }
+
+        .card ul{
+            list-style:none;
+        }
+
+        /* CONTACTO */
+
+        .contacto{
+            padding:70px 20px;
+            text-align:center;
+        }
+
+        .contacto h2{
+            font-size:40px;
+            margin-bottom:30px;
+        }
+
+        .contact-box{
+            background:white;
+            max-width:500px;
+            margin:auto;
+            padding:35px;
+            border-radius:25px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-box p{
+            margin:15px 0;
+            font-size:18px;
+        }
+
+        /* COMPAÑEROS */
+
+        .clase{
+            padding:70px 20px;
+            text-align:center;
+        }
+
+        .clase h2{
+            font-size:38px;
+            margin-bottom:40px;
+            color:#7a4fcf;
+        }
+
+        .cards-container{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            flex-wrap:wrap;
+        }
+
+        .student-card{
+            background:white;
+            width:220px;
+            padding:25px;
+            border-radius:20px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.08);
+            transition:0.3s;
+        }
+
+        .student-card:hover{
+            transform:translateY(-5px);
+        }
+
+        .student-card h3{
+            color:#9b6dff;
+            margin-bottom:10px;
+        }
+
+        /* FOOTER */
+
+        footer{
+            background:#9b6dff;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            h1{
+                font-size:34px;
+            }
+
+            .overlay{
+                padding:30px;
+            }
+
+            .bio{
+                text-align:left;
+            }
+
+        }
+
+    </style>
 </head>
+
 <body>
 
     <!-- ENCABEZADO -->
+
     <header class="hero">
+
         <div class="overlay">
+
+            <!-- FOTO -->
+            <div class="foto-container">
+
+                <!-- CAMBIA "foto.jpg" POR TU FOTO -->
+                <img src="foto.jpg" alt="Foto de Lucia" class="foto">
+
+            </div>
+
             <h1>LUCIA CASTILLO VELASQUEZ</h1>
+
             <h2>5to Semestre de Administración</h2>
-            <p>
-                Cuento con experiencia laboral desde los 18 años, lo que me ha permitido desarrollar habilidades de responsabilidad, compromiso , organizacion y adaptacion a distintos entornos de trabajo. A lo largo de mi experiencia he aorendido a trabajar en equipo, resolver problemas y mantener una buwna comunicacion con las personas siempre enfocandome en cumplir objetivos de manera eficiente.
-                Tengo conocimientos en herramientas empresariales y de analisis como SAP, Exel y Power BI a nivel basico 
-            </p>
+
+            <div class="bio">
+
+                <p>
+                    Mi nombre es Lucía Castillo Velásquez. Cuento con experiencia laboral desde los 18 años, lo que me ha permitido desarrollar habilidades de responsabilidad, compromiso, organización y adaptación a distintos entornos de trabajo. A lo largo de mi experiencia, he aprendido a trabajar en equipo, resolver problemas y mantener una buena comunicación con las personas, siempre enfocándome en cumplir objetivos de manera eficiente.
+                </p>
+
+                <br>
+
+                <p>
+                    Tengo conocimientos en herramientas empresariales y de análisis como SAP, Excel y Power BI a nivel básico, competencias que me ayudan a desenvolverme mejor en áreas administrativas y de gestión. Además, actualmente continúo fortaleciendo mis capacidades profesionales y personales, con interés en seguir aprendiendo y adquiriendo nuevas habilidades que aporten valor a mi desarrollo laboral.
+                </p>
+
+                <br>
+
+                <p>
+                    Me considero una persona proactiva, perseverante y con buena disposición para asumir nuevos retos. Disfruto trabajar en ambientes dinámicos donde pueda aportar ideas y seguir creciendo profesionalmente. También tengo un gran interés por los animales y las películas, actividades que forman parte de mis intereses personales y que reflejan mi lado empático, creativo y observador.
+                </p>
+
+            </div>
+
+            <div class="contacto-info">
+
+                <h3>Datos de Contacto</h3>
+
+                <p>📸 Instagram: @Lucía Castillo</p>
+                <p>📞 Número: 987533412</p>
+                <p>📧 Correo: Lucía.castillo.Velasquez@ucsp.edu.pe</p>
+
+            </div>
 
             <a href="#contacto" class="btn">Me pueden contactar</a>
+
         </div>
+
     </header>
 
     <!-- SOBRE MI -->
+
     <section class="sobre">
+
         <div class="card">
+
             <h2>Presentación</h2>
 
             <p>
-                Hola, soy Lucia, estudiante del 5to semestre de Administración.
+                Hola, soy Lucía, estudiante del 5to semestre de Administración.
                 Me considero una persona organizada, perseverante y dedicada
                 a mis estudios. Me gusta desarrollar nuevas habilidades,
                 aprender sobre gestión empresarial y mejorar cada día
                 tanto académica como personalmente.
             </p>
+
         </div>
 
         <div class="card">
+
             <h2>Habilidades</h2>
 
             <ul>
@@ -47,22 +330,31 @@
                 <li>✔ Organización administrativa</li>
                 <li>✔ Responsabilidad y disciplina</li>
             </ul>
+
         </div>
+
     </section>
 
     <!-- CONTACTO -->
+
     <section class="contacto" id="contacto">
+
         <h2>Contacto</h2>
 
         <div class="contact-box">
-            <p><strong>📞 Número:</strong> 987 654 321</p>
-            <p><strong>📧 Correo:</strong> lucia@gmail.com</p>
+
+            <p><strong>📞 Número:</strong> 987533412</p>
+            <p><strong>📧 Correo:</strong> Lucía.castillo.Velasquez@ucsp.edu.pe</p>
             <p><strong>📍 Ciudad:</strong> Arequipa, Perú</p>
+
         </div>
+
     </section>
 
-    <!-- COMPAÑEROS -->
+    <!-- CONTACTOS DE LA CLASE -->
+
     <section class="clase">
+
         <h2>Contactos de la Clase</h2>
 
         <div class="cards-container">
@@ -88,11 +380,15 @@
             </div>
 
         </div>
+
     </section>
 
-    <!-- PIE -->
+    <!-- FOOTER -->
+
     <footer>
+
         <p>© 2026 - Portafolio de Lucia | Administración</p>
+
     </footer>
 
 </body>
