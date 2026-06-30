@@ -3,277 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUCIA CASTILLO VELASQUEZ</title>
-<meta name="google-site-verification" content="5VQul__EXjjO-b5UypzEOfM25ZyLa03mjMKI6e5HafQ" />    <style>
+    <title>LUCIA CASTILLO VELASQUEZ - Portafolio</title>
+    <meta name="google-site-verification" content="5VQul__EXjjO-b5UypzEOfM25ZyLa03mjMKI6e5HafQ" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
+    <style>
+        :root {
+            --primary: #7a4fcf;
+            --secondary: #9b6dff;
+            --bg-light: #f6efff;
+            --text-dark: #2d2636;
+            --accent: #c8a2ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
 
-        body{
-            background:#f6efff;
-            color:#4b3b5a;
+        body {
+            background: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
-        /* ENCABEZADO */
-
-        .hero{
-            width:100%;
-            background:linear-gradient(135deg,#c8a2ff,#f5e9ff);
-            padding:40px 0;
+        /* Hero / Banner Section */
+        .hero {
+            background: white;
+            padding-bottom: 40px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
-        .overlay{
-            width:100%;
-            background:white;
-            padding-bottom:60px;
-            text-align:center;
+        .banner-container {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--accent), #f5e9ff);
+            overflow: hidden;
+            position: relative;
         }
 
-        /* IMAGEN HORIZONTAL */
-
-        .banner{
-            width:100%;
-            height:320px;
-            overflow:hidden;
+        /* IMAGEN DE PRESENTACIÓN */
+        .banner-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
         }
 
-        .banner img{
-            width:100%;
-            height:100%;
-            object-fit:cover;
+        .header-content {
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
         }
 
-        /* TITULOS */
-
-        h1{
-            font-size:55px;
-            color:#7a4fcf;
-            margin-top:40px;
-            margin-bottom:10px;
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 50px;
+            color: var(--primary);
+            letter-spacing: -1px;
+            background: white;
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        h2{
-            color:#9b6dff;
-            font-size:38px;
-            margin-bottom:30px;
+        .subtitle {
+            color: var(--secondary);
+            font-size: 24px;
+            margin-top: 15px;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        /* BIO */
-
-        .bio{
-            width:85%;
-            margin:auto;
-            font-size:20px;
-            line-height:1.9;
-            text-align:justify;
-            color:#5f4b75;
+        /* Bio Section */
+        .content-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
         }
 
-        .bio p{
-            margin-bottom:25px;
+        .bio-text {
+            font-size: 18px;
+            text-align: justify;
+            color: #555;
         }
 
-        /* CONTACTO */
-
-        .contacto-info{
-            width:80%;
-            margin:40px auto;
-            background:#f3e7ff;
-            padding:30px;
-            border-radius:25px;
-            box-shadow:0 5px 15px rgba(0,0,0,0.08);
+        .bio-text p {
+            margin-bottom: 20px;
         }
 
-        .contacto-info h3{
-            color:#7a4fcf;
-            margin-bottom:20px;
-            font-size:30px;
+        /* Contact Links */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
         }
 
-        .contacto-info p{
-            font-size:20px;
-            margin:15px 0;
+        .contact-link {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: 0.3s;
+            border: 1px solid transparent;
         }
 
-        /* SOBRE MI */
-
-        .sobre{
-            padding:80px 30px;
-            display:flex;
-            justify-content:center;
-            gap:30px;
-            flex-wrap:wrap;
+        .contact-link:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(122, 79, 207, 0.1);
         }
 
-        .card{
-            background:white;
-            width:350px;
-            padding:35px;
-            border-radius:25px;
-            box-shadow:0 5px 20px rgba(0,0,0,0.08);
-            transition:0.3s;
+        .contact-link i {
+            font-size: 24px;
+            color: var(--primary);
+            margin-right: 15px;
         }
 
-        .card:hover{
-            transform:translateY(-8px);
+        /* Cards Section */
+        .sobre {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px 30px 20px 30px;
+            flex-wrap: wrap;
         }
 
-        .card h2{
-            color:#7a4fcf;
-            font-size:30px;
-            margin-bottom:20px;
+        .card {
+            background: white;
+            width: 400px;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
         }
 
-        .card p,
-        .card li{
-            font-size:18px;
-            line-height:1.8;
+        .card h2, .comp-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            margin-bottom: 20px;
         }
 
-        .card ul{
-            list-style:none;
+        .card ul {
+            list-style: none;
         }
 
-        /* FOOTER */
-
-        footer{
-            background:#9b6dff;
-            color:white;
-            text-align:center;
-            padding:25px;
-            font-size:18px;
+        .card li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
         }
 
-        /* RESPONSIVE */
-
-        @media(max-width:768px){
-
-            h1{
-                font-size:35px;
-            }
-
-            h2{
-                font-size:28px;
-            }
-
-            .banner{
-                height:220px;
-            }
-
-            .bio{
-                width:90%;
-                font-size:17px;
-            }
-
-            .contacto-info{
-                width:90%;
-            }
-
+        .card li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
         }
 
+        /* SECCIÓN COMPAÑEROS */
+        .comp-section {
+            max-width: 830px;
+            margin: 20px auto 80px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        .comp-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .comp-btn {
+            display: flex;
+            align-items: center;
+            background: var(--bg-light);
+            color: var(--primary);
+            padding: 15px 25px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .comp-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .comp-btn i {
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            font-weight: 300;
+        }
+
+        @media(max-width: 768px) {
+            h1 { font-size: 32px; }
+            .banner-container { height: 250px; }
+            .comp-section { margin: 20px 30px 60px 30px; }
+        }
     </style>
-
 </head>
-
 <body>
 
-    <!-- ENCABEZADO -->
-
     <header class="hero">
-
-        <div class="overlay">
-
-            <!-- IMAGEN HORIZONTAL -->
-            <!-- CAMBIA "foto.jpg" POR EL NOMBRE DE TU FOTO -->
-
-            <div class="banner">
-                <img src="foto.jpg" alt="Foto de Lucia">
-            </div>
-
-            <h1>LUCIA CASTILLO VELASQUEZ</h1>
-
-            <h2>5to Semestre de Administración</h2>
-
-            <!-- BIOGRAFIA -->
-
-            <div class="bio">
-
-                <p>
-                    Mi nombre es Lucía Castillo Velásquez. Cuento con experiencia laboral desde los 18 años, lo que me ha permitido desarrollar habilidades de responsabilidad, compromiso, organización y adaptación a distintos entornos de trabajo. A lo largo de mi experiencia, he aprendido a trabajar en equipo, resolver problemas y mantener una buena comunicación con las personas, siempre enfocándome en cumplir objetivos de manera eficiente.
-                </p>
-
-                <p>
-                    Tengo conocimientos en herramientas empresariales y de análisis como SAP, Excel y Power BI a nivel básico, competencias que me ayudan a desenvolverme mejor en áreas administrativas y de gestión. Además, actualmente continúo fortaleciendo mis capacidades profesionales y personales, con interés en seguir aprendiendo y adquiriendo nuevas habilidades que aporten valor a mi desarrollo laboral.
-                </p>
-
-                <p>
-                    Me considero una persona proactiva, perseverante y con buena disposición para asumir nuevos retos. Disfruto trabajar en ambientes dinámicos donde pueda aportar ideas y seguir creciendo profesionalmente. También tengo un gran interés por los animales y las películas, actividades que forman parte de mis intereses personales y que reflejan mi lado empático, creativo y observador.
-                </p>
-
-            </div>
-
-            <!-- CONTACTO -->
-
-            <div class="contacto-info">
-
-                <h3>Datos de Contacto</h3>
-
-                <p>📸 Instagram: Lucía Castillo</p>
-
-                <p>📞 Número: 987533412</p>
-
-                <p>📧 Correo: Lucia.castillo.Velasquez@ucsp.edu.pe</p>
-
-            </div>
-
+        <div class="banner-container">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1280" alt="Lucía Castillo - Administración">
         </div>
 
+        <div class="header-content">
+            <h1>LUCIA CASTILLO VELASQUEZ</h1>
+            <p class="subtitle">Administración | 5to Semestre</p>
+        </div>
     </header>
 
-    <!-- SOBRE MI -->
+    <main class="content-section">
+        <div class="bio-text">
+            <p>
+                Mi nombre es Lucía Castillo Velásquez. Cuento con experiencia laboral desde los 18 años, lo que me ha permitido desarrollar habilidades de responsabilidad, compromiso, organización y adaptación a distintos entornos de trabajo.
+            </p>
+            <p>
+                Tengo conocimientos en herramientas empresariales y de análisis como <strong>SAP, Excel y Power BI</strong>. Me considero una persona proactiva, perseverante y con interés por los animales y el cine, lo que refleja mi lado empático y creativo.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+            <a href="https://www.instagram.com/tu_usuario" target="_blank" class="contact-link">
+                <i class="fab fa-instagram"></i>
+                <div>
+                    <strong>Instagram</strong><br>
+                    <span>@LuciaCastillo</span>
+                </div>
+            </a>
+
+            <a href="https://wa.me/51987533412" target="_blank" class="contact-link">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                    <strong>WhatsApp</strong><br>
+                    <span>+51 987 533 412</span>
+                </div>
+            </a>
+
+            <a href="mailto:Lucia.castillo.Velasquez@ucsp.edu.pe" class="contact-link">
+                <i class="far fa-envelope"></i>
+                <div>
+                    <strong>Email</strong><br>
+                    <span>Enviar mensaje directo</span>
+                </div>
+            </a>
+        </div>
+    </main>
 
     <section class="sobre">
-
         <div class="card">
-
-            <h2>Presentación</h2>
-
-            <p>
-                Hola, soy Lucía, estudiante del 5to semestre de Administración.
-                Me considero una persona organizada, perseverante y dedicada
-                a mis estudios. Me gusta desarrollar nuevas habilidades,
-                aprender sobre gestión empresarial y mejorar cada día
-                tanto académica como personalmente.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <h2>Habilidades</h2>
-
+            <h2>Habilidades Clave</h2>
             <ul>
-                <li>Liderazgo</li>
-                <li>Trabajo en equipo</li>
-                <li>Comunicación efectiva</li>
-                <li>Organización administrativa</li>
-                <li>Responsabilidad y disciplina</li>
+                <li>Liderazgo Estratégico</li>
+                <li>Trabajo en Equipo Multinivel</li>
+                <li>Comunicación Asertiva</li>
+                <li>Gestión de Herramientas SAP/Excel</li>
             </ul>
-
         </div>
 
+        <div class="card">
+            <h2>Visión</h2>
+            <p>
+                Busco aportar valor mediante la optimización de procesos administrativos y el crecimiento continuo en ambientes dinámicos que desafíen mis competencias actuales.
+            </p>
+        </div>
     </section>
 
-    <!-- FOOTER -->
+    <section class="comp-section">
+        <h2>Compañeros</h2>
+        <div class="comp-links">
+            <a href="https://anghelojeda-cloud.github.io/Mi-Pagina-Web/" target="_blank" class="comp-btn">
+                <i class="fa-solid fa-graduation-cap"></i> Sitio Web de Anghel Ojeda
+            </a>
+            <a href="https://santiagovargasobando.github.io/sitio_personal/" target="_blank" class="comp-btn">
+                <i class="fa-solid fa-graduation-cap"></i> Sitio Web de Santiago Vargas
+            </a>
+        </div>
+    </section>
 
     <footer>
-
-        <p>Lucí :3 </p>
-
+        <p>Desarrollado por Lucía Castillo &copy; 2026</p>
     </footer>
 
 </body>
